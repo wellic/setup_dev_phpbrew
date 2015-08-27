@@ -1,0 +1,7 @@
+
+phpbrew known -o -u -m
+phpbrew update
+phpbrew known -u
+
+# phpbrew known --old -m -u
+

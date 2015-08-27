@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+s=${0##*_set_}
+echo $s > version

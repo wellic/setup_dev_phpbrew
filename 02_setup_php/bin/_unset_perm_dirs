@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+#Снова включим защиту файлов
+
+sudo chmod -R u+w,go-w /etc/apache2/
+#sudo chmod a-w         /etc/apache2/mods-available/
+sudo chmod -R a-wx         /usr/lib/apache2/modules/
+sudo chmod a+x         /usr/lib/apache2/modules/
+
+sudo chown root:root   /usr/lib/apache2/modules/libphp5.*

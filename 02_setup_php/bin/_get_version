@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+FILE_VERSION=version
+[ ! -f $FILE_VERSION ] && exit 1;
+
+VERSION=$(head -n 1 $FILE_VERSION)
+
+PHP_SUBVERSION=${1:-$VERSION}
+[ -z $PHP_SUBVERSION ] && exit 1;
+
+echo $PHP_SUBVERSION > version
+echo $PHP_SUBVERSION

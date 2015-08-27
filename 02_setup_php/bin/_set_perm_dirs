@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+#По умолчанию, система не даст нам записать данные в директорию Апача. 
+#Можно делать изменения вручную, либо временно дать права на запись.
+
+
+#sudo chmod a+w /etc/apache2/mods-available/
+sudo chmod -R a+w /etc/apache2/
+sudo chmod -R a+wx /usr/lib/apache2/modules/
+sudo chown $(whoami) /usr/lib/apache2/modules/libphp5.*
+
+

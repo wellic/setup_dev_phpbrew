@@ -1,0 +1,13 @@
+#Установка phpbrew Ubuntu
+
+#Установим зависимости
+#sudo apt-get build-dep php5
+#sudo apt-get install -y php5 php5-dev php-pear autoconf automake curl build-essential libxslt1-dev re2c libxml2 libxml2-dev php5-cli bison libbz2-dev libreadline-dev libmcrypt-dev libmcrypt4
+
+#Возможно, понадобятся еще какие-то, в зависимости от того, что вы будете компилировать с свою версию PHP. Это можно будет увидеть в логе. Мне хватило этого списка.
+
+#Устанавливаем сам phpbrew
+cd /tmp
+curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+chmod +x phpbrew
+sudo mv phpbrew /usr/bin/phpbrew
