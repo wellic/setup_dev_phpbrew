@@ -8,6 +8,12 @@ PHP_SUBVERSION=${1:-$VERSION}
 bin/_set_perm_dirs
 
 echo phpbrew install $PHP_SUBVERSION +default +apxs2=$(which apxs2) --no-clean
-phpbrew install --no-clean $PHP_SUBVERSION +default +apxs2=$(which apxs2) 
+phpbrew install --no-clean $PHP_SUBVERSION \
+ +default \
+ +dbs \
+ +apxs2=$(which apxs2) 
 
 bin/_unset_perm_dirs
+
+./02_switch
+
